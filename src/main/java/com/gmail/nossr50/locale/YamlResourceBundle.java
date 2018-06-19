@@ -44,7 +44,10 @@ public class YamlResourceBundle extends ResourceBundle {
         String prefix = null;
 
         while (!(next = baseKeyFor(next)).isEmpty()) {
-            prefix = getOrDefault(next + ".prefix", prefix);
+            prefix = getOrDefault(next + ".prefix", null);
+            if (prefix != null) {
+                break;
+            }
         }
 
         if (prefix == null) {
