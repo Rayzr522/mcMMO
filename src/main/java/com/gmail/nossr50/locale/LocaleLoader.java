@@ -1,21 +1,24 @@
 package com.gmail.nossr50.locale;
 
+import com.gmail.nossr50.config.Config;
+import com.gmail.nossr50.mcMMO;
+import org.bukkit.ChatColor;
+
+import java.io.File;
 import java.text.MessageFormat;
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-
-import org.bukkit.ChatColor;
-
-import com.gmail.nossr50.mcMMO;
-import com.gmail.nossr50.config.Config;
 
 public final class LocaleLoader {
     private static final String BUNDLE_ROOT = "com.gmail.nossr50.locale.locale";
     private static ResourceBundle bundle = null;
     private static ResourceBundle enBundle = null;
 
-    private LocaleLoader() {};
+    private LocaleLoader() {
+    }
+
+    ;
 
     public static String getString(String key) {
         return getString(key, (Object[]) null);
@@ -24,7 +27,7 @@ public final class LocaleLoader {
     /**
      * Gets the appropriate string from the Locale files.
      *
-     * @param key The key to look up the string with
+     * @param key              The key to look up the string with
      * @param messageArguments Any arguments to be added to the string
      * @return The properly formatted locale string
      */
@@ -35,12 +38,10 @@ public final class LocaleLoader {
 
         try {
             return getString(key, bundle, messageArguments);
-        }
-        catch (MissingResourceException ex) {
+        } catch (MissingResourceException ex) {
             try {
                 return getString(key, enBundle, messageArguments);
-            }
-            catch (MissingResourceException ex2) {
+            } catch (MissingResourceException ex2) {
                 if (!key.contains("Guides")) {
                     mcMMO.p.getLogger().warning("Could not find locale string: " + key);
                 }
@@ -81,12 +82,22 @@ public final class LocaleLoader {
 
             if (myLocale.length == 1) {
                 locale = new Locale(myLocale[0]);
-            }
-            else if (myLocale.length >= 2) {
+            } else if (myLocale.length >= 2) {
                 locale = new Locale(myLocale[0], myLocale[1]);
+            } else {
+                throw new IllegalArgumentException(String.format("'%s' is not a valid locale!", Config.getInstance().getLocale()));
             }
 
-            bundle = ResourceBundle.getBundle(BUNDLE_ROOT, locale);
+
+            File pluginFolder = new File(mcMMO.getMainDirectory());
+            File localeFile = new File(pluginFolder, String.format("locale_%s.yml", locale.toString()));
+
+            if (localeFile.exists()) {
+                bundle = new YamlResourceBundle(localeFile);
+            } else {
+                bundle = ResourceBundle.getBundle(BUNDLE_ROOT, locale);
+            }
+
             enBundle = ResourceBundle.getBundle(BUNDLE_ROOT, Locale.US);
         }
     }
@@ -116,5 +127,11 @@ public final class LocaleLoader {
         input = input.replaceAll("\\Q[[RESET]]\\E", ChatColor.RESET.toString());
 
         return input;
+    }
+
+    public static void reload() {
+        if (bundle instanceof YamlResourceBundle) {
+            ((YamlResourceBundle) bundle).reload();
+        }
     }
 }

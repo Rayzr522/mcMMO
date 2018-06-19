@@ -1,15 +1,14 @@
 package com.gmail.nossr50.commands;
 
+import com.gmail.nossr50.commands.party.PartySubcommandType;
+import com.gmail.nossr50.config.Config;
+import com.gmail.nossr50.locale.LocaleLoader;
+import com.gmail.nossr50.mcMMO;
+import com.gmail.nossr50.util.Permissions;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-
-import com.gmail.nossr50.mcMMO;
-import com.gmail.nossr50.commands.party.PartySubcommandType;
-import com.gmail.nossr50.config.Config;
-import com.gmail.nossr50.locale.LocaleLoader;
-import com.gmail.nossr50.util.Permissions;
 
 public class McmmoCommand implements CommandExecutor {
     @Override
@@ -48,6 +47,9 @@ public class McmmoCommand implements CommandExecutor {
                     displayGeneralCommands(sender);
                     displayOtherCommands(sender);
                     displayPartyCommands(sender);
+                } else if (args[0].equalsIgnoreCase("reload")) {
+                    LocaleLoader.reload();
+                    sender.sendMessage(ChatColor.GRAY + "" + ChatColor.ITALIC + "Config reloaded.");
                 }
                 return true;
 
