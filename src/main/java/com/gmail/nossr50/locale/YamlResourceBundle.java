@@ -69,7 +69,7 @@ public class YamlResourceBundle extends ResourceBundle {
 
     @Override
     protected Object handleGetObject(String key) {
-        return ChatColor.translateAlternateColorCodes('&', getTranslatedMessage(key.toLowerCase()));
+        return getTranslatedMessage(key);
     }
 
     @Override
