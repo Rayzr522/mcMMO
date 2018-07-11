@@ -1,0 +1,1527 @@
+Acrobatics:
+  Roll:
+    Chance: '[[RED]]Roll Chance: [[YELLOW]]{0}'
+    Text: '**Rolled**'
+    GraceChance: '[[RED]]Graceful Roll Chance: [[YELLOW]]{0}'
+  SkillName: ACROBATICS
+  Combat:
+    Proc: '[[GREEN]]**Dodged**'
+  Effect:
+    '1': Reduces or Negates fall damage
+    '0': Roll
+    '3': Twice as effective as a normal Roll
+    '2': Graceful Roll
+    '5': Reduce attack damage by half
+    '4': Dodge
+  DodgeChance: '[[RED]]Dodge Chance: [[YELLOW]]{0}'
+  Ability:
+    Proc: '[[GREEN]]**Graceful Landing**'
+  Listener: 'Acrobatics:'
+  Skillup: '[[YELLOW]]Acrobatics skill increased by {0}. Total ({1})'
+Commands:
+  xplock:
+    unlocked: '[[GOLD]]Your XP BAR is now [[GREEN]]UNLOCKED[[GOLD]]!'
+    locked: '[[GOLD]]Your XP BAR is now locked to {0}!'
+  XPGain:
+    Axes: Attacking Monsters
+    Alchemy: Brewing Potions
+    Unarmed: Attacking Monsters
+    Fishing: Fishing (Go figure!)
+    Excavation: Digging and finding treasures
+  Party:
+    Alliance:
+      Members:
+        Header: '[[RED]]-----[][[GREEN]]ALLIANCE MEMBERS[[RED]][]-----'
+      Help:
+        '0': '[[RED]]This party hasn''t formed an alliance. Invite a party leader'
+        '1': '[[RED]] to an alliance with [[DARK_AQUA]]/party alliance invite <player>[[RED]].'
+      None: '[[RED]]Your does not have an ally.'
+      Header: '[[RED]]-----[][[GREEN]]PARTY ALLIANCE[[RED]][]-----'
+      Invite:
+        Accepted: '[[GREEN]]Alliance invite Accepted.'
+        '1': '[[YELLOW]]Type [[GREEN]]/party alliance accept[[YELLOW]] to accept the
+          invite'
+        '0': '[[RED]]ALERT: [[GREEN]]You have received a party alliance invite for
+          {0} from {1}'
+      AlreadyAllies: '[[RED]]Your party already has an ally. Disband with [[DARK_AQUA]]/party
+        alliance disband'
+      Ally: '[[WHITE]]{0} [[DARK_GRAY]]IS ALLIED WITH: [[WHITE]]{1}'
+    Features:
+      Header: '[[RED]]-----[][[GREEN]]FEATURES[[RED]][]-----'
+    AlreadyExists: '[[DARK_RED]]Party {0} already exists!'
+    Header: '[[RED]]-----[][[GREEN]]PARTY[[RED]][]-----'
+    Status:
+      Alliance: '[[DARK_GRAY]]ALLY: [[WHITE]]{0}'
+    Teleport: '[[GREEN]]- Teleport to party member'
+    Commands: '[[RED]]---[][[GREEN]]PARTY COMMANDS[[RED]][]---'
+    None: '[[RED]]You are not in a party.'
+    ToggleShareCategory: '[[GRAY]]Party item sharing for [[GOLD]]{0} [[GRAY]]has been
+      [[DARK_AQUA]]{1}'
+    Quit: '[[GREEN]]- Leave your current party'
+    ItemShareCategories: '[[DARK_GRAY]]Sharing Items: [[GRAY]][[ITALIC]]{0}'
+    Kick: '[[RED]]You were kicked from party {0}!'
+    Leave: '[[RED]]You have left that party'
+    UnlockedFeatures: '[[DARK_GRAY]]Unlocked Features: [[GRAY]][[ITALIC]]{0}'
+    Invite: '[[GREEN]]- Send party invite'
+    Members:
+      Header: '[[RED]]-----[][[GREEN]]MEMBERS[[RED]][]-----'
+    MembersNear: '[[DARK_GRAY]]NEAR YOU [[DARK_AQUA]]{0}[[DARK_GRAY]]/[[DARK_AQUA]]{1}'
+    Chat:
+      'On': Party Chat only [[GREEN]]On
+      'Off': Party Chat only [[RED]]Off
+    ItemShare: '[[GRAY]]ITEM [[DARK_AQUA]]({0})'
+    ShareMode: '[[DARK_GRAY]]SHARE MODE:'
+    ExpShare: '[[GRAY]]EXP [[DARK_AQUA]]({0})'
+    SetSharing: '[[GRAY]]Party {0} sharing set to: [[DARK_AQUA]]{1}'
+    Join: '[[GRAY]]Joined Party: {0}'
+    Rename: '[[GRAY]]Party name changed to: [[WHITE]]{0}'
+    Toggle: '[[GREEN]]- Toggle Party Chat'
+    Create: '[[GRAY]]Created Party: {0}'
+    Accept: '[[GREEN]]- Accept party invite'
+  xprate:
+    proper:
+      '0': '[[RED]]Proper usage to change the XP rate is /xprate <integer> <true/false>'
+      '1': '[[RED]]Proper usage to restore the XP rate to default is /xprate reset'
+      '2': '[[RED]]Please specify true or false to indicate if this is an xp event
+        or not'
+    modified: '[[RED]]The XP RATE was modified to {0}'
+    started:
+      '1': '[[GOLD]]mcMMO XP RATE IS NOW {0}x!'
+      '0': '[[GOLD]]XP EVENT FOR mcMMO HAS STARTED!'
+    over: '[[RED]]mcMMO XP Rate Event is OVER!!'
+  GodMode:
+    Forbidden: '[mcMMO] God Mode not permitted on this world (See Permissions)'
+    Enabled: '[[YELLOW]]mcMMO Godmode Enabled'
+    Toggle: God mode has been toggled for [[YELLOW]]{0}
+    Disabled: '[[YELLOW]]mcMMO Godmode Disabled'
+  SkillInfo: '[[GREEN]]- View detailed information about a skill'
+  Description:
+    mcnotify: Toggle mcMMO abilities chat display notifications on/off
+    mcmmo: Show a brief description of mcMMO
+    addlevels: Add mcMMO levels to a user
+    xprate: Modify the mcMMO XP rate or start an mcMMO XP event
+    xplock: Lock your mcMMO XP bar to a specific mcMMO skill
+    Skill: Display detailed mcMMO skill info for {0}
+    mmoedit: Edit mcMMO levels for a user
+    mmoupdate: Migrate mcMMO database from an old database into the current one
+    mcscoreboard: Manage your mcMMO Scoreboard
+    mchud: Change your mcMMO HUD style
+    inspect: View detailed mcMMO info on another player
+    ptp: Teleport to an mcMMO party member
+    mcconvert: Converts database types or experience formula types
+    vampirism: Modify the mcMMO vampirism percentage or toggle vampirism mode on/off
+    partychat: Toggle mcMMO party chat on/off or send party chat messages
+    adminchat: Toggle mcMMO admin chat on/off or send admin chat messages
+    mcpurge: Purge users with no mcMMO levels and users who have not connected in
+      over {0} months from the mcMMO database.
+    mcability: Toggle mcMMO abilities being readied on right-click on/off
+    mcrank: Show mcMMO ranking for a player
+    mccooldown: View all of the mcMMO ability cooldowns
+    mmoshowdb: Show the name of the current database type (for later use with /mmoupdate)
+    mcremove: Remove a user from the mcMMO database
+    mcrefresh: Refresh all cooldowns for mcMMO
+    addxp: Add mcMMO XP to a user
+    skillreset: Reset mcMMO levels for a user
+    mctop: Show mcMMO leader boards
+    hardcore: Modify the mcMMO hardcore percentage or toggle hardcore mode on/off
+    mcgod: Toggle mcMMO god-mode on/off
+    party: Control various mcMMO party settings
+    mcstats: Show your mcMMO levels and XP
+  Healthbars:
+    Changed:
+      BAR: '[mcMMO] Your healthbar display type was changed to [[YELLOW]]Boxes[[WHITE]].'
+      DISABLED: '[mcMMO] Your mob healthbars have been [[GRAY]]disabled[[WHITE]].'
+      HEARTS: '[mcMMO] Your healthbar display type was changed to [[RED]]Hearts[[WHITE]].'
+    Invalid: Invalid healthbar type!
+  Ability:
+    'Off': Ability use toggled [[RED]]off
+    Toggle: Ability use has been toggled for [[YELLOW]]{0}
+    'On': Ability use toggled [[GREEN]]on
+  AdminChat:
+    'On': Admin Chat only [[GREEN]]On
+    'Off': Admin Chat only [[RED]]Off
+  mmoedit:
+    AllSkills:
+      '1': '[[GREEN]]Your level in all skills was set to {0}!'
+    Modified:
+      '1': '[[GREEN]]Your level in {0} was set to {1}!'
+      '2': '[[RED]]{0} has been modified for {1}.'
+  AdminToggle: '[[GREEN]]- Toggle admin chat'
+  ptp:
+    Disabled: Party teleporting [[RED]]disabled
+    Request1: '[[YELLOW]]{0} [[GREEN]]has requested to teleport to you.'
+    Request2: '[[GREEN]]To teleport, type [[YELLOW]]/ptp accept[[GREEN]]. Request
+      expires in [[RED]]{0} [[GREEN]]seconds.'
+    AcceptAny:
+      Enabled: Party teleport request confirmation [[GREEN]]enabled
+      Disabled: Party teleport request confirmation [[RED]]disabled
+    NoRequests: '[[RED]]You have no teleport requests at this time'
+    RequestExpired: '[[RED]]Party teleport request has expired!'
+    NoWorldPermissions: '[[RED]][mcMMO] You do not have permission to teleport to
+      the world {0}.'
+    Enabled: Party teleporting [[GREEN]]enabled
+  Offline: '[[RED]]This command does not work for offline players.'
+  mcc:
+    Header: '[[RED]]---[][[GREEN]]mcMMO Commands[[RED]][]---'
+  Reset:
+    Single: '[[GREEN]]Your {0} skill level has been reset successfully.'
+    All: '[[GREEN]]All of your skill levels have been reset successfully.'
+  Scoreboard:
+    Clear: '[[DARK_AQUA]]mcMMO scoreboard cleared.'
+    Keep: '[[DARK_AQUA]]The mcMMO scoreboard will stay up until you use [[GREEN]]/mcscoreboard
+      clear[[DARK_AQUA]].'
+    Timer: '[[DARK_AQUA]]The mcMMO scoreboard will clear [[GOLD]]{0}[[DARK_AQUA]]
+      seconds from now.'
+    Tip:
+      Clear: '[[GOLD]]Tip: Use [[RED]]/mcscoreboard clear[[GOLD]] to get rid of the
+        scoreboard.'
+      Keep: '[[GOLD]]Tip: Use [[RED]]/mcscoreboard keep[[GOLD]] while the scoreboard
+        is shown to keep it from going away.'
+    NoBoard: '[[RED]]The mcMMO scoreboard is not active.'
+    Help:
+      '0': '[[GOLD]] == [[GREEN]]Help for [[RED]]/mcscoreboard[[GOLD]] =='
+      '3': '[[DARK_AQUA]]/mcscoreboard[[AQUA]] time [n] [[WHITE]] - clear the McMMO
+        scoreboard after [[LIGHT_PURPLE]]n[[WHITE]] seconds'
+      '2': '[[DARK_AQUA]]/mcscoreboard[[AQUA]] keep [[WHITE]] - keep the mcMMO scoreboard
+        up'
+      '1': '[[DARK_AQUA]]/mcscoreboard[[AQUA]] clear [[WHITE]] - clear the McMMO scoreboard'
+  addxp:
+    AwardAll: '[[GREEN]]You were awarded {0} experience in all skills!'
+    AwardSkill: '[[GREEN]]You were awarded {0} experience in {1}!'
+  mcpurge:
+    Success: '[[GREEN]]The database was successfully purged!'
+  Disabled: '[[RED]]This command is disabled.'
+  Usage:
+    Player: player
+    XP: xp
+    Rate: rate
+    Skill: skill
+    Password: password
+    '2': '[[RED]]Proper usage is /{0} {1} {2}'
+    '1': '[[RED]]Proper usage is /{0} {1}'
+    '0': '[[RED]]Proper usage is /{0}'
+    '3': '[[RED]]Proper usage is /{0} {1} {2} {3}'
+    PartyName: name
+    FullClassName: classname
+    Page: page
+    Message: message
+    Level: level
+  mcrank:
+    Skill: '[[YELLOW]]{0}[[GREEN]] - [[GOLD]]Rank [[WHITE]]#[[GREEN]]{1}'
+    Overall: '[[YELLOW]]Overall[[GREEN]] - [[GOLD]]Rank [[WHITE]]#[[GREEN]]{0}'
+    Player: '[[RED]]TARGET: [[WHITE]]{0}'
+    Unranked: '[[WHITE]]Unranked'
+    Heading: '[[GOLD]]-=PERSONAL RANKINGS=-'
+  Stats:
+    Self: YOUR STATS
+  ModDescription: '[[GREEN]]- Read brief mod description'
+  NoConsole: This command does not support console usage.
+  Skill:
+    Invalid: '[[RED]]That is not a valid skillname!'
+    Leaderboard: '[[YELLOW]]--mcMMO [[BLUE]]{0}[[YELLOW]] Leaderboard--'
+    ChildSkill: '[[RED]]Child skills are not valid for this command!'
+  Leaderboards: <skill> <page> [[GREEN]]- Leaderboards
+  mcrefresh:
+    Success: '[[RED]]{0}''''s cooldowns have been refreshed.'
+  addlevels:
+    AwardSkill:
+      '2': '[[RED]]{0} has been modified for {1}.'
+      '1': '[[GREEN]]You were awarded {0} levels in {1}!'
+    AwardAll:
+      '1': '[[GREEN]]You were awarded {0} levels in all skills!'
+      '2': '[[RED]]All skills have been modified for {0}.'
+  Invite:
+    Success: '[[GREEN]]Invite sent successfully.'
+  mchud:
+    Invalid: '[[RED]]That is not a valid HUD type.'
+  mctop:
+    Tip: '[[GOLD]]Tip: Use [[RED]]/mcrank[[GOLD]] to view all of your personal rankings!'
+  PowerLevel:
+    Capped: '[[DARK_RED]]POWER LEVEL: [[GREEN]]{0} [[DARK_RED]]MAX LEVEL: [[YELLOW]]{1}'
+  mcconvert:
+    Database:
+      Finish: '[[GRAY]]Database migration complete; the {1} database now has all data
+        from the {0} database.'
+      InvalidType: '[[RED]]{0} is not a valid database type.'
+      Start: '[[GRAY]]Starting conversion from {0} to {1}...'
+      Same: '[[RED]]You are already using the {0} database!'
+    Experience:
+      Invalid: '[[RED]]Unknown formula type! Valid types are: [[GREEN]]LINEAR [[RED]]and
+        [[GREEN]]EXPONENTIAL.'
+      Same: '[[RED]]Already using formula type {0}'
+      Finish: '[[GRAY]]Formula conversion complete; now using {0} XP curve.'
+      Start: '[[GRAY]]Starting conversion from {0} to {1} curve'
+  Database:
+    Cooldown: '[[RED]]You must wait 1 second before using this command again.'
+    Processing: '[[RED]]Your previous command is still being processed. Please wait.'
+  mcgod: '[[GREEN]]- Toggle GodMode'
+  DoesNotExist: '[[RED]]Player does not exist in the database!'
+  Cooldowns:
+    Row:
+      Y: '  [[AQUA]]{0}[[WHITE]] - [[DARK_GREEN]]Ready!'
+      N: '  [[RED]]{0}[[WHITE]] - [[GOLD]]{1} seconds left'
+    Header: '[[GOLD]]--= [[GREEN]]mcMMO Ability Cooldowns[[GOLD]] =--'
+  mmoshowdb: '[[YELLOW]]The currently used database is [[GREEN]]{0}'
+  Notifications:
+    'On': Ability notifications toggled [[GREEN]]on
+    'Off': Ability notifications toggled [[RED]]off
+  ToggleAbility: '[[GREEN]]- Toggle ability activation with right click'
+  Inspect: <player> [[GREEN]]- View detailed player info
+  Party1: '[[GREEN]]- Create a new party'
+  Party2: '[[GREEN]]- Join a players party'
+  NotLoaded: '[[RED]]Player profile is not loaded yet.'
+  Chat:
+    Console: '*Console*'
+  Other: '[[RED]]---[][[GREEN]]OTHER COMMANDS[[RED]][]---'
+  mcremove:
+    Success: '[[GREEN]]{0} was successfully removed from the database!'
+Perks:
+  XP:
+    Desc: Receive boosted XP in certain skills.
+    Name: Experience
+  Lucky:
+    Bonus: '[[GOLD]] ({0} with Lucky Perk)'
+    Desc: Gives {0} skills and abilities a 33.3% better chance to activate.
+    Name: Luck
+  Cooldowns:
+    Desc: Cuts cooldown duration by {0}.
+    Name: Fast Recovery
+  ActivationTime:
+    Desc: Increases ability activation time by {0} seconds.
+    Bonus: '[[GOLD]] ({0}s with Endurance Perk)'
+    Name: Endurance
+Archery:
+  Effect:
+    '4': Arrow Retrieval
+    '3': Disorients foes and deals {0} DMG
+    '2': Daze (Players)
+    '1': Increases damage done with bows
+    '0': Skill Shot
+    '5': Chance to retrieve arrows from corpses
+  Combat:
+    SkillshotBonus: '[[RED]]Skill Shot Bonus Damage: [[YELLOW]]{0}'
+    DazeChance: '[[RED]]Chance to Daze: [[YELLOW]]{0}'
+    RetrieveChance: '[[RED]]Chance to Retrieve Arrows: [[YELLOW]]{0}'
+  Skillup: '[[YELLOW]]Archery skill increased by {0}. Total ({1})'
+  Listener: 'Archery:'
+  SkillName: ARCHERY
+Party:
+  Feature:
+    Locked:
+      Chat: LOCKED UNTIL {0}+ (PARTY CHAT)
+      XpShare: LOCKED UNTIL {0}+ (XP SHARING)
+      ItemShare: LOCKED UNTIL {0}+ (ITEM SHARING)
+      Alliance: LOCKED UNTIL {0}+ (ALLIANCES)
+      Teleport: LOCKED UNTIL {0}+ (PARTY TELEPORT)
+    Chat: Party Chat
+    Teleport: Party Teleport
+    Disabled:
+      '1': '[[RED]]Party chat is not unlocked yet.'
+      '3': '[[RED]]Party alliances are not unlocked yet.'
+      '2': '[[RED]]Party teleport is not unlocked yet.'
+      '5': '[[RED]]Party XP sharing is not unlocked yet.'
+      '4': '[[RED]]Party item sharing is not unlocked yet.'
+    XpShare: XP Sharing
+    Alliance: Alliances
+    ItemShare: Item Sharing
+  ShareType:
+    Xp: XP
+    Item: ITEM
+  Help:
+    '2': '[[RED]]Consult [[DARK_AQUA]]{0} [[RED]]for more information'
+    '1': '[[RED]]To create a party, use [[DARK_AQUA]]{0} <name> [password].'
+    '4': '[[RED]]To lock or unlock your party, use [[DARK_AQUA]]{0}'
+    '3': '[[RED]]Use [[DARK_AQUA]]{0} <player> [password] [[RED]]to join or [[DARK_AQUA]]{1}
+      [[RED]]to quit'
+    '0': '[[RED]]Proper usage is [[DARK_AQUA]]{0} <player> [password].'
+    '9': '[[RED]]Use [[DARK_AQUA]]{0} [[RED]]to share items with party members'
+    '6': '[[RED]]To kick a player from your party, use [[DARK_AQUA]]{0} <player>'
+    '5': '[[RED]]To password protect your party, use [[DARK_AQUA]]{0} <password>'
+    '8': '[[RED]]To disband your party, use [[DARK_AQUA]]{0}'
+    '7': '[[RED]]To transfer ownership of your party, use [[DARK_AQUA]]{0} <player>'
+    '10': '[[RED]]Use [[DARK_AQUA]]{0} [[RED]]to enable XP sharing with party members'
+  IsLocked: '[[RED]]This party is already locked!'
+  NotOwner: '[[DARK_RED]]You are not the party leader.'
+  Owner:
+    New: '[[GREEN]]{0} is the new party leader.'
+    Player: '[[GREEN]]You are now the party leader.'
+    NotLeader: '[[DARK_RED]]You are no longer the party leader.'
+  Player:
+    InSameParty: '[[RED]]{0} already is in your party!'
+    Invalid: '[[RED]]That is not a valid player.'
+  Forbidden: '[mcMMO] Parties not permitted on this world (See Permissions)'
+  Disband: '[[GRAY]]The party has been disbanded'
+  ItemShare:
+    Category:
+      Herbalism: Herbalism
+      Misc: Misc
+      Loot: Loot
+      Woodcutting: Woodcutting
+      Mining: Mining
+  Join:
+    Self: '[[RED]]You can''t join yourself!'
+  Alliance:
+    Disband: '[[GRAY]]Your party is no longer allies with [[RED]]{0}'
+    Formed: '[[GRAY]]Your party is now allies with [[GREEN]]{0}'
+  Target:
+    NotOwner: '[[DARK_RED]]{0} is not the party leader.'
+  ShareMode:
+    None: NONE
+    Equal: EQUAL
+    Random: RANDOM
+  LevelUp: '[[YELLOW]]Party level increased by {0}. Total ({1})'
+  Password:
+    Set: '[[GREEN]]Party password set to {0}'
+    Incorrect: '[[RED]]Party password is incorrect.'
+    Removed: '[[GREEN]]Party password has been cleared.'
+    None: '[[RED]]This party is password protected. Please provide a password to join.'
+  Teleport:
+    Hurt: '[[RED]]You have been hurt in the last {0} seconds and cannot teleport.'
+    Disabled: '[[RED]]{0} doesn''t allow party teleportation.'
+    Self: '[[RED]]You can''t teleport to yourself!'
+    Player: '[[GREEN]]You have teleported to {0}.'
+    Dead: '[[RED]]You can''t teleport to a dead player.'
+    Target: '[[GREEN]]{0} has teleported to you.'
+  Specify: '[[RED]]You must specify a party.'
+  Locked: '[[RED]]Party is locked, only party leader may invite.'
+  InvalidName: '[[DARK_RED]]That is not a valid party name.'
+  InformedOnJoin: '{0} [[GREEN]]has joined your party'
+  Rename:
+    Same: '[[RED]]That is already the name of your party!'
+  Invite:
+    Self: '[[RED]]You can''t invite yourself!'
+  InformedOnNameChange: '[[GOLD]]{0} [[GREEN]]has set the party name to [[WHITE]]{1}'
+  Status:
+    Unlocked: '[[DARK_GREEN]](OPEN)'
+    Locked: '[[DARK_RED]](INVITE-ONLY)'
+  InformedOnQuit: '{0} [[GREEN]]has left your party'
+  Unlocked: '[[GRAY]]Party is unlocked'
+  PlayerNotInParty: '[[DARK_RED]]{0} is not in a party'
+  NotOnline: '[[DARK_RED]]{0} is not online!'
+  IsntLocked: '[[RED]]This party is not locked!'
+  NotInYourParty: '[[DARK_RED]]{0} is not in your party'
+Mining:
+  Ability:
+    Length: '[[RED]]Super Breaker Length: [[YELLOW]]{0}s'
+    Ready: '[[GREEN]]**YOU READY YOUR PICKAXE**'
+    Lower: '[[GRAY]]**YOU LOWER YOUR PICKAXE**'
+    Locked:
+      '1': LOCKED UNTIL {0}+ SKILL (BIGGER BOMBS)
+      '0': LOCKED UNTIL {0}+ SKILL (BLAST MINING)
+      '2': LOCKED UNTIL {0}+ SKILL (DEMOLITIONS EXPERTISE)
+  Skills:
+    SuperBreaker:
+      Other:
+        'Off': '[[RED]]Super Breaker[[GREEN]] has worn off for [[YELLOW]]{0}'
+        'On': '[[GREEN]]{0}[[DARK_GREEN]] has used [[RED]]Super Breaker!'
+      Refresh: '[[GREEN]]Your [[YELLOW]]Super Breaker [[GREEN]]ability is refreshed!'
+      'Off': '[[RED]]**Super Breaker has worn off**'
+      'On': '[[GREEN]]**SUPER BREAKER ACTIVATED**'
+  Effect:
+    '5': Bonuses to mining with TNT
+    '6': Bigger Bombs
+    '3': Double the normal loot
+    '4': Blast Mining
+    '1': Speed+, Triple Drop Chance
+    '2': Double Drops
+    '0': Super Breaker (ABILITY)
+    '9': Decreases damage from TNT explosions
+    '7': Increases TNT explosion radius
+    '8': Demolitions Expertise
+    DropChance: '[[RED]]Double Drop Chance: [[YELLOW]]{0}'
+    Decrease: '[[RED]]Demolitions Expert Damage Decrease: [[YELLOW]]{0}'
+  Blast:
+    Refresh: '[[GREEN]]Your [[YELLOW]]Blast Mining [[GREEN]]ability is refreshed!'
+    Effect: +{0} ore yield, -{1} debris yield, {2}x drops
+    Rank: '[[RED]]Blast Mining: [[YELLOW]] Rank {0}/{1} [[GRAY]]({2})'
+    Radius:
+      Increase: '[[RED]]Blast Radius Increase: [[YELLOW]]+{0}'
+    Boom: '[[GRAY]]**BOOM**'
+    Other:
+      'On': '[[GREEN]]{0}[[DARK_GREEN]] has used [[RED]]Blast Mining!'
+  SkillName: MINING
+  Skillup: '[[YELLOW]]Mining skill increased by {0}. Total ({1})'
+  Listener: 'Mining:'
+Salvage:
+  Skills:
+    ArcaneSuccess: '[[GREEN]]You able to extract all of the knowledge contained within
+      this item!'
+    ArcaneFailed: '[[RED]]You were unable to extract the knowledge contained within
+      this item.'
+    ArcanePartial: '[[YELLOW]]You were only able to extract some of the knowledge
+      contained within this item.'
+    Adept:
+      Level: '[[RED]]You must be level [[YELLOW]]{0}[[RED]] to salvage [[YELLOW]]{1}'
+      Damaged: '[[DARK_RED]]You aren''t skilled enough to salvage damaged items.'
+    TooDamaged: '[[DARK_RED]]This item is too damaged to be salvaged.'
+    Success: '[[GREEN]]Item salvaged!'
+  Ability:
+    Bonus:
+      '0': Advanced Salvage
+      '1': Max yield {0} item destroyed
+    Locked:
+      '0': LOCKED UNTIL {0}+ SKILL (ADVANCED SALVAGE)
+  Arcane:
+    Rank: '[[RED]]Arcane Salvaging: [[YELLOW]]Rank {0}/{1}'
+    ExtractPartial: '[[GRAY]]AS Partial-Enchant Chance'
+    ExtractFull: '[[GRAY]]AS Full-Enchant Chance'
+  Pretty:
+    Name: Salvage
+  Listener: 'Salvage:'
+  Effect:
+    '2': Arcane Salvaging
+    '3': Extract enchantments from items
+    '0': Advanced Salvage
+    '1': Salvage damaged items
+  SkillName: SALVAGE
+Woodcutting:
+  Skills:
+    TreeFeller:
+      Splinter: '[[RED]]YOUR AXE SPLINTERS INTO DOZENS OF PIECES!'
+      Refresh: '[[GREEN]]Your [[YELLOW]]Tree Feller [[GREEN]]ability is refreshed!'
+      Other:
+        'Off': '[[RED]]Tree Feller[[GREEN]] has worn off for [[YELLOW]]{0}'
+        'On': '[[GREEN]]{0}[[DARK_GREEN]] has used [[RED]]Tree Feller!'
+      'On': '[[GREEN]]**TREE FELLER ACTIVATED**'
+      Threshold: '[[RED]]That tree is too large!'
+      'Off': '[[RED]]**Tree Feller has worn off**'
+  Skillup: '[[YELLOW]]Woodcutting skill increased by {0}. Total ({1})'
+  Ability:
+    Locked:
+      '0': LOCKED UNTIL {0}+ SKILL (LEAF BLOWER)
+    '1': Blow away leaves
+    '0': Leaf Blower
+    Length: '[[RED]]Tree Feller Length: [[YELLOW]]{0}s'
+    Chance:
+      DDrop: '[[RED]]Double Drop Chance: [[YELLOW]]{0}'
+  Effect:
+    '3': Blow Away Leaves
+    '2': Leaf Blower
+    '5': Double the normal loot
+    '4': Double Drops
+    '1': Make trees explode
+    '0': Tree Feller (ABILITY)
+  Listener: 'Woodcutting:'
+  SkillName: WOODCUTTING
+Scoreboard:
+  Header:
+    PlayerInspect: '[[YELLOW]]mcMMO Stats: {0}'
+    PlayerCooldowns: '[[YELLOW]]mcMMO Cooldowns'
+    PlayerRank: '[[YELLOW]]mcMMO Rankings'
+    PowerLevel: '[[RED]]Power Level'
+    PlayerStats: '[[YELLOW]]mcMMO Stats'
+  Misc:
+    Ability: Ability
+    Level: '[[DARK_AQUA]]Level'
+    PowerLevel: '[[GOLD]]Power Level'
+    Overall: '[[GOLD]]Overall'
+    Cooldown: '[[LIGHT_PURPLE]]Cooldown'
+    CurrentXP: '[[GREEN]]Current XP'
+    RemainingXP: '[[YELLOW]]Remaining XP'
+Axes:
+  Combat:
+    CritStruck: '[[DARK_RED]]You were CRITICALLY hit!'
+    GI:
+      Struck: '[[RED]]**HIT BY GREATER IMPACT**'
+      Proc: '[[GREEN]]**STRUCK WITH GREAT FORCE**'
+    SS:
+      Struck: '[[DARK_RED]]Struck by SKULL SPLITTER!'
+      Length: '[[RED]]Skull Splitter Length: [[YELLOW]]{0}s'
+    CritChance: '[[RED]]Chance to critically strike: [[YELLOW]]{0}'
+    CriticalHit: '[[RED]]CRITICAL HIT!'
+  SkillName: AXES
+  Skills:
+    SS:
+      'Off': '[[RED]]**Skull Splitter has worn off**'
+      Other:
+        'Off': '[[RED]]Skull Splitter[[GREEN]] has worn off for [[YELLOW]]{0}'
+        'On': '[[GREEN]]{0}[[DARK_GREEN]] has used [[RED]]Skull Splitter!'
+      Refresh: '[[GREEN]]Your [[YELLOW]]Skull Splitter [[GREEN]]ability is refreshed!'
+      'On': '[[GREEN]]**Skull Splitter ACTIVATED**'
+  Ability:
+    Bonus:
+      '1': Bonus {0} damage
+      '0': Axe Mastery
+      '3': Deal {0} Bonus DMG to armor
+      '2': Armor Impact
+      '5': Deal {0} Bonus DMG to unarmored foes
+      '4': Greater Impact
+    Lower: '[[GRAY]]**YOU LOWER YOUR AXE**'
+    Ready: '[[GREEN]]**YOU READY YOUR AXE**'
+  Listener: 'Axes:'
+  Skillup: '[[YELLOW]]Axes skill increased by {0}. Total ({1})'
+  Effect:
+    '9': Deal bonus damage to unarmored foes
+    '8': Greater Impact
+    '7': Strike with enough force to shatter armor
+    '6': Armor Impact
+    '5': Adds bonus DMG
+    '4': Axe Mastery
+    '3': Double Damage
+    '2': Critical Strikes
+    '1': Deal AoE Damage
+    '0': Skull Splitter (Ability)
+Unarmed:
+  Ability:
+    IronGrip:
+      Defender: '[[GREEN]]Your iron grip kept you from being disarmed!'
+      Attacker: '[[RED]]Your opponent has an iron grip!'
+    Bonus:
+      '0': Iron Arm Style
+      '1': +{0} DMG Upgrade
+    Chance:
+      IronGrip: '[[RED]]Iron Grip Chance: [[YELLOW]]{0}'
+      ArrowDeflect: '[[RED]]Arrow Deflect Chance: [[YELLOW]]{0}'
+      Disarm: '[[RED]]Disarm Chance: [[YELLOW]]{0}'
+    Ready: '[[GREEN]]**YOU READY YOUR FISTS**'
+    Berserk:
+      Length: '[[RED]]Berserk Length: [[YELLOW]]{0}s'
+    Lower: '[[GRAY]]**YOU LOWER YOUR FISTS**'
+  Effect:
+    '0': Berserk (ABILITY)
+    '9': Prevents you from being disarmed
+    '4': Iron Arm Style
+    '3': Drops the foes item held in hand
+    '2': Disarm (Players)
+    '1': +50% DMG, Breaks weak materials
+    '8': Iron Grip
+    '7': Deflect arrows
+    '6': Arrow Deflect
+    '5': Hardens your arm over time
+  Skillup: '[[YELLOW]]Unarmed skill increased by {0}. Total ({1})'
+  Skills:
+    Berserk:
+      Other:
+        'Off': '[[RED]]Berserk[[GREEN]] has worn off for [[YELLOW]]{0}'
+        'On': '[[GREEN]]{0}[[DARK_GREEN]] has used [[RED]]Berserk!'
+      Refresh: '[[GREEN]]Your [[YELLOW]]Berserk [[GREEN]]ability is refreshed!'
+      'On': '[[GREEN]]**BERSERK ACTIVATED**'
+      'Off': '[[RED]]**Berserk has worn off**'
+  SkillName: UNARMED
+  Listener: 'Unarmed:'
+Skills:
+  Header: '[[RED]]-----[][[GREEN]]{0}[[RED]][]-----'
+  Cancelled: '[[RED]]{0} cancelled!'
+  NeedMore: '[[DARK_RED]]You need more [[GRAY]]{0}'
+  Stats: '[[YELLOW]]{0}[[GREEN]]{1}[[DARK_AQUA]] XP([[GRAY]]{2}[[DARK_AQUA]]/[[GRAY]]{3}[[DARK_AQUA]])'
+  ChildStats: '[[YELLOW]]{0}[[GREEN]]{1}'
+  ConfirmOrCancel: '[[GREEN]]Right-click again to confirm [[GOLD]]{0}[[GREEN]]. Left-click
+    to cancel.'
+  TooTired: '[[RED]]You are too tired to use that ability again. [[YELLOW]]({0}s)'
+  Parents: PARENTS
+  Child: '[[GOLD]](CHILD SKILL)'
+  Disarmed: '[[DARK_RED]]You have been disarmed!'
+Swords:
+  Combat:
+    Bleed:
+      Chance: '[[RED]]Bleed Chance: [[YELLOW]]{0}'
+      Note: '[[GRAY]]NOTE: [[YELLOW]]1 Tick happens every 2 seconds'
+      Length: '[[RED]]Bleed Length: [[YELLOW]]{0} ticks'
+    Bleeding:
+      Stopped: '[[GRAY]]The bleeding has [[GREEN]]stopped[[GRAY]]!'
+      Started: '[[DARK_RED]] You''re bleeding!'
+    Counter:
+      Chance: '[[RED]]Counter Attack Chance: [[YELLOW]]{0}'
+      Hit: '[[DARK_RED]]Hit with a counter-attack!'
+    Countered: '[[GREEN]]**COUNTER-ATTACKED**'
+    SS:
+      Struck: '[[DARK_RED]]Struck by SERRATED STRIKES!'
+  Skills:
+    SS:
+      'Off': '[[RED]]**Serrated Strikes has worn off**'
+      Other:
+        'Off': '[[RED]]Serrated Strikes[[GREEN]] has worn off for [[YELLOW]]{0}'
+        'On': '[[GREEN]]{0}[[DARK_GREEN]] has used [[RED]]Serrated Strikes!'
+      Refresh: '[[GREEN]]Your [[YELLOW]]Serrated Strikes [[GREEN]]ability is refreshed!'
+      'On': '[[GREEN]]**SERRATED STRIKES ACTIVATED**'
+  Effect:
+    '0': Counter Attack
+    '1': Reflect {0} of damage taken while blocking
+    '2': Serrated Strikes (ABILITY)
+    '3': '{0} DMG AoE, Bleed+ AoE'
+    '4': Serrated Strikes Bleed+
+    '5': '{0} Tick Bleed'
+    '6': Bleed
+    '7': Apply a bleed DoT
+  Skillup: '[[YELLOW]]Swords skill increased by {0}. Total ({1})'
+  SkillName: SWORDS
+  SS:
+    Length: '[[RED]]Serrated Strikes Length: [[YELLOW]]{0}s'
+  Ability:
+    Lower: '[[GRAY]]**YOU LOWER YOUR SWORD**'
+    Ready: '[[GREEN]]**YOU READY YOUR SWORD**'
+  Listener: 'Swords:'
+MOTD:
+  PerksPrefix: '[[RED]][mcMMO Perks]'
+  Version: '[[GOLD]][mcMMO] Running version [[DARK_AQUA]]{0}'
+  Website: '[[GOLD]][mcMMO] [[GREEN]]{0}[[YELLOW]] - mcMMO Website'
+  Hardcore:
+    DeathStatLoss:
+      Stats: '[[GOLD]][mcMMO] [[DARK_AQUA]]Skill Death Penalty: [[DARK_RED]]{0}%'
+    Vampirism:
+      Stats: '[[GOLD]][mcMMO] [[DARK_AQUA]]Vampirism Stat Leech: [[DARK_RED]]{0}%'
+    Enabled: '[[GOLD]][mcMMO] [[DARK_AQUA]]Hardcore Mode enabled: [[DARK_RED]]{0}'
+  Donate: '[[DARK_AQUA]]Donation Info:'
+Fishing:
+  Ability:
+    Info: '[[RED]]Magic Hunter: [[GRAY]] **Improves With Treasure Hunter Rank**'
+    TH:
+      Poison: '[[GRAY]]Something doesn''t smell quite right...'
+      DropRate: |-
+        [[RED]] Drop Rate: [[DARK_RED]]Trap: [[YELLOW]]{0} [[GRAY]]Common: [[YELLOW]]{1} [[GREEN]]Uncommon: [[YELLOW]]{2}
+        [[BLUE]]Rare: [[YELLOW]]{3} [[LIGHT_PURPLE]]Epic: [[YELLOW]]{4} [[GOLD]]Legendary: [[YELLOW]]{5} [[AQUA]]Record: [[YELLOW]]{6}
+      Boom: '[[GRAY]]BOOM TIME!!!'
+      MagicRate: '[[RED]]Magic Hunter Chance: [[YELLOW]]{0}'
+      MagicFound: '[[GRAY]]You feel a touch of magic with this catch...'
+    IceFishing: '[[RED]]Ice Fishing: Go fishing in ice'
+    Locked:
+      '0': LOCKED UNTIL {0}+ SKILL (SHAKE)
+      '1': LOCKED UNTIL {0}+ SKILL (ICE FISHING)
+      '2': LOCKED UNTIL {0}+ SKILL (MASTER ANGLER)
+    Shake: '[[RED]]Shake Chance: [[YELLOW]]{0}'
+    FD: '[[RED]]Fisherman''''s Diet: [[YELLOW]]Rank {0}'
+    Chance: '[[RED]]Bite Chance: [[YELLOW]]{0}'
+    Rank: '[[RED]]Treasure Hunter Rank: [[YELLOW]]{0}/{1}'
+  Skillup: '[[YELLOW]]Fishing skill increased by {0}. Total ({1})'
+  SkillName: FISHING
+  Effect:
+    '9': Improves chance of getting a bite while fishing
+    '0': Treasure Hunter (Passive)
+    '1': Fish up misc. objects
+    '2': Magic Hunter
+    '3': Find Enchanted Items
+    '4': Shake (vs. Entities)
+    '5': Shake items off of mobs w/ fishing pole
+    '6': Fisherman's Diet
+    '7': Improves hunger restored from fished foods
+    '8': Master Angler
+    '11': Allows you to fish in icy biomes
+    '10': Ice Fishing
+  Listener: 'Fishing:'
+  Chance:
+    Raining: '[[BLUE]] Rain Bonus'
+Herbalism:
+  Skills:
+    GTe:
+      'On': '[[GREEN]]**GREEN TERRA ACTIVATED**'
+      Other:
+        'On': '[[GREEN]]{0}[[DARK_GREEN]] has used [[RED]]Green Terra!'
+        'Off': '[[RED]]Green Terra[[GREEN]] has worn off for [[YELLOW]]{0}'
+      Refresh: '[[GREEN]]Your [[YELLOW]]Green Terra [[GREEN]]ability is refreshed!'
+      'Off': '[[RED]]**Green Terra has worn off**'
+  Ability:
+    ShroomThumb:
+      Chance: '[[RED]]Shroom Thumb Chance: [[YELLOW]]{0}'
+      Fail: '[[RED]]**SHROOM THUMB FAIL**'
+    GTe:
+      Length: '[[RED]]Green Terra Length: [[YELLOW]]{0}s'
+      NeedMore: '[[RED]]You need more seeds to spread Green Terra.'
+    GTh:
+      Stage: '[[RED]]Green Thumb Stage: [[YELLOW]] Crops grow in stage {0}'
+      Fail: '[[RED]]**GREEN THUMB FAIL**'
+    Lower: '[[GRAY]]**YOU LOWER YOUR HOE**'
+    DoubleDropChance: '[[RED]]Double Drop Chance: [[YELLOW]]{0}'
+    FD: '[[RED]]Farmer''''s Diet: [[YELLOW]]Rank {0}'
+    Ready: '[[GREEN]]**YOU READY YOUR HOE**'
+    HylianLuck: '[[RED]]Hylian Luck Chance: [[YELLOW]]{0}'
+  HylianLuck: '[[GREEN]]The luck of Hyrule is with you today!'
+  Effect:
+    '13': Spread mycelium to dirt & grass
+    '11': Gives a small chance of finding rare items
+    '12': Shroom Thumb
+    '10': Hylian Luck
+    '1': Spread the Terra, 3x Drops
+    '0': Green Terra (ABILITY)
+    '5': Make bricks mossy, or make grass grow
+    '4': Green Thumb (Blocks)
+    '3': Auto-Plants crops when harvesting
+    '2': Green Thumb (Wheat)
+    '9': Double the normal loot
+    '8': Double Drops (All Herbs)
+    '7': Improves hunger restored from farmed foods
+    '6': Farmer's Diet
+  Listener: 'Herbalism:'
+  Skillup: '[[YELLOW]]Herbalism skill increased by {0}. Total ({1})'
+  SkillName: HERBALISM
+Alchemy:
+  Catalysis:
+    Speed: '[[RED]]Brewing Speed: [[YELLOW]]{0}'
+  Ability:
+    Locked:
+      '0': LOCKED UNTIL {0}+ SKILL (CATALYSIS)
+  Effect:
+    '3': Brew potions with more ingredients
+    '2': Concoctions
+    '1': Increases potion brewing speed
+    '0': Catalysis
+  Concoctions:
+    Ingredients: '[[RED]]Ingredients [[[YELLOW]]{0}[[RED]]]: [[YELLOW]]{1}'
+    Rank: '[[RED]]Concoctions Rank: [[YELLOW]]{0}/{1}'
+  Listener: 'Alchemy:'
+  SkillName: ALCHEMY
+  Skillup: '[[YELLOW]]Alchemy skill increased by {0}. Total ({1})'
+XPRate:
+  Event: '[[GOLD]]mcMMO is currently in an XP rate event! XP rate is {0}x!'
+Hardcore:
+  Vampirism:
+    Killer:
+      Success: '[[GOLD]][mcMMO] [[DARK_AQUA]]You have stolen [[BLUE]]{0}[[DARK_AQUA]]
+        levels from [[YELLOW]]{1}.'
+      Failure: '[[GOLD]][mcMMO] [[YELLOW]]{0}[[GRAY]] was too unskilled to grant you
+        any knowledge.'
+    PercentageChanged: '[[GOLD]][mcMMO] The stat leech percentage was changed to {0}.'
+    Victim:
+      Failure: '[[GOLD]][mcMMO] [[YELLOW]]{0}[[GRAY]] was unable to steal knowledge
+        from you!'
+      Success: '[[GOLD]][mcMMO] [[YELLOW]]{0}[[DARK_RED]] has stolen [[BLUE]]{1}[[DARK_RED]]
+        levels from you!'
+    Name: Vampirism
+  DeathStatLoss:
+    Name: Skill Death Penalty
+    PercentageChanged: '[[GOLD]][mcMMO] The stat loss percentage was changed to {0}.'
+    PlayerDeath: '[[GOLD]][mcMMO] [[DARK_RED]]You have lost [[BLUE]]{0}[[DARK_RED]]
+      levels from death.'
+  Mode:
+    Enabled: '[[GOLD]][mcMMO] Hardcore mode {0} enabled for {1}.'
+    Disabled: '[[GOLD]][mcMMO] Hardcore mode {0} disabled for {1}.'
+Stats:
+  Header:
+    Combat: '[[GOLD]]-=COMBAT SKILLS=-'
+    Misc: '[[GOLD]]-=MISC SKILLS=-'
+    Gathering: '[[GOLD]]-=GATHERING SKILLS=-'
+  Own:
+    Stats: '[[GREEN]][mcMMO] Stats'
+Smelting:
+  SkillName: SMELTING
+  Ability:
+    FluxMining: '[[RED]]Flux Mining Chance: [[YELLOW]]{0}'
+    Locked:
+      '0': LOCKED UNTIL {0}+ SKILL (VANILLA XP BOOST)
+      '1': LOCKED UNTIL {0}+ SKILL (FLUX MINING)
+    VanillaXPBoost: '[[RED]]Vanilla XP Multiplier: [[YELLOW]]{0}x'
+    FuelEfficiency: '[[RED]]Fuel Efficiency Multiplier: [[YELLOW]]{0}x'
+    SecondSmelt: '[[RED]]Second Smelt Chance: [[YELLOW]]{0}'
+  Effect:
+    '0': Fuel Efficiency
+    '1': Increase the burn time of fuel used in furnaces when smelting
+    '4': Vanilla XP Boost
+    '5': Increase vanilla XP gained while smelting
+    '2': Second Smelt
+    '3': Double the resources gained from smelting
+    '6': Flux Mining
+    '7': Chance for ores to be instantly smelted while mining
+  Listener: 'Smelting:'
+Taming:
+  Summon:
+    Fail:
+      TooMany: '[[RED]]You have reached the maximum limit of pets to summon. [[YELLOW]]({0})'
+      Horse: '[[RED]]You have too many horses nearby to summon any more.'
+      Ocelot: '[[RED]]You have too many ocelots nearby to summon any more.'
+      Wolf: '[[RED]]You have too many wolves nearby to summon any more.'
+    Lifespan: '[[YELLOW]] (Lifespan: {0}s)'
+    Complete: '[[GREEN]]Summoning complete'
+    Name:
+      Format: '{0}''''s {1}'
+  SkillName: TAMING
+  Listener:
+    Wolf: '[[DARK_GRAY]]Your wolf scurries back to you...'
+  Combat:
+    Chance:
+      Gore: '[[RED]]Gore Chance: [[YELLOW]]{0}'
+  Ability:
+    Bonus:
+      '6': Sharpened Claws
+      '5': Explosives do 1/{0} normal damage
+      '4': Shock Proof
+      '3': 1/{0} Damage, Fire Resistance
+      '2': Thick Fur
+      '1': Wolves avoid danger
+      '0': Environmentally Aware
+      '9': '{0} Chance for heal on attack'
+      '8': Fast Food Service
+      '7': +{0} Damage
+      '10': Holy Hound
+      '11': Regain health when damaged by magic or poison
+    Locked:
+      '0': LOCKED UNTIL {0}+ SKILL (ENVIRONMENTALLY AWARE)
+      '1': LOCKED UNTIL {0}+ SKILL (THICK FUR)
+      '2': LOCKED UNTIL {0}+ SKILL (SHOCK PROOF)
+      '3': LOCKED UNTIL {0}+ SKILL (SHARPENED CLAWS)
+      '4': LOCKED UNTIL {0}+ SKILL (FAST FOOD SERVICE)
+      '5': LOCKED UNTIL {0}+ SKILL (HOLY HOUND)
+  Effect:
+    '0': Beast Lore
+    '6': Environmentally Aware
+    '5': Damage Bonus
+    '8': Thick Fur
+    '7': Cactus/Lava Phobia, Fall DMG Immune
+    '2': Gore
+    '1': Bone-whacking inspects wolves & ocelots
+    '4': Sharpened Claws
+    '3': Critical Strike that applies Bleed
+    '9': DMG Reduction, Fire Resistance
+    '19': Healed by Magic & Poison
+    '18': Holy Hound
+    '17': Chance for wolves to heal on attack
+    '16': Fast Food Service
+    '14': |-
+      [[GRAY]]COTW: Crouch and left-click with
+        {0} {1} (Ocelot), {2} {3} (Wolf), {4} {5} (Horse)
+    '13': Summon an animal to your side
+    '12': Call of the Wild
+    '11': Explosive Damage Reduction
+    '10': Shock Proof
+  Skillup: '[[YELLOW]]Taming skill increased by {0}. Total ({1})'
+Repair:
+  Skills:
+    AdeptIron: '[[DARK_RED]]You''re not skilled enough to repair Iron.'
+    FeltEasy: '[[GRAY]]That felt easy.'
+    FullDurability: '[[GRAY]]That is at full durability.'
+    Adept: '[[RED]]You must be level [[YELLOW]]{0}[[RED]] to repair [[YELLOW]]{1}'
+    Mastery: '[[RED]]Repair Mastery: [[YELLOW]]Extra {0} durability restored'
+    AdeptGold: '[[DARK_RED]]You''re not skilled enough to repair Gold.'
+    Super:
+      Chance: '[[RED]]Super Repair Chance: [[YELLOW]]{0}'
+    AdeptStone: '[[DARK_RED]]You''re not skilled enough to repair Stone.'
+    AdeptDiamond: '[[DARK_RED]]You''re not skilled enough to repair Diamond.'
+    StackedItems: '[[DARK_RED]]You can''t repair stacked items.'
+  Effect:
+    '15': Repair Stone Tools
+    '12': Iron Repair ({0}+ SKILL)
+    '11': Repair Gold Tools & Armor
+    '14': Stone Repair ({0}+ SKILL)
+    '13': Repair Iron Tools & Armor
+    '10': Gold Repair ({0}+ SKILL)
+    '1': Repair Tools & Armor
+    '0': Repair
+    '3': Increased repair amount
+    '2': Repair Mastery
+    '5': Double effectiveness
+    '4': Super Repair
+    '7': Repair Diamond Tools & Armor
+    '6': Diamond Repair ({0}+ SKILL)
+    '9': Repair magic items
+    '8': Arcane Forging
+  Arcane:
+    Chance:
+      Success: '[[GRAY]]AF Success Rate: [[YELLOW]]{0}%'
+      Downgrade: '[[GRAY]]AF Downgrade Chance: [[YELLOW]]{0}%'
+    Rank: '[[RED]]Arcane Forging: [[YELLOW]]Rank {0}/{1}'
+    Fail: '[[RED]]Arcane power has permanently left the item.'
+    Lost: '[[RED]]You were not skilled enough to keep any enchantments.'
+    Perfect: '[[GREEN]]You have sustained the arcane energies in this item.'
+    Downgrade: '[[RED]]Arcane power has decreased for this item.'
+  Listener:
+    Anvil: '[[DARK_RED]]You have placed an anvil, anvils can repair tools and armor.'
+  Error: '[[DARK_RED]]mcMMO encountered an error attempting to repair this item!'
+  Pretty:
+    Name: Repair
+  Skillup: '[[YELLOW]]Repair skill increased by {0}. Total ({1})'
+  SkillName: REPAIR
+Excavation:
+  Skills:
+    GigaDrillBreaker:
+      Other:
+        'On': '[[GREEN]]{0}[[DARK_GREEN]] has used [[RED]]Giga Drill Breaker!'
+        'Off': '[[RED]]Giga Drill Breaker[[GREEN]] has worn off for [[YELLOW]]{0}'
+      Refresh: '[[GREEN]]Your [[YELLOW]]Giga Drill Breaker [[GREEN]]ability is refreshed!'
+      'Off': '[[RED]]**Giga Drill Breaker has worn off**'
+      'On': '[[GREEN]]**GIGA DRILL BREAKER ACTIVATED**'
+  Effect:
+    '0': Giga Drill Breaker (ABILITY)
+    '2': Treasure Hunter
+    '1': 3x Drop Rate, 3x EXP, +Speed
+    '3': Ability to dig for treasure
+    Length: '[[RED]]Giga Drill Breaker Length: [[YELLOW]]{0}s'
+  Ability:
+    Lower: '[[GRAY]]**YOU LOWER YOUR SHOVEL**'
+    Ready: '[[GREEN]]**YOU READY YOUR SHOVEL**'
+  Skillup: '[[YELLOW]]Excavation skill increased by {0}. Total ({1})'
+  Listener: 'Excavation:'
+  SkillName: EXCAVATION
+Guides:
+  Woodcutting:
+    Section:
+      '0': |-
+        [[DARK_AQUA]]About Woodcutting:
+        [[YELLOW]]Woodcutting is all about chopping down trees.
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]XP is gained whenever you break log blocks.
+      '1': |-
+        [[DARK_AQUA]]How does Tree Feller work?
+        [[YELLOW]]Tree Feller is an active ability, you can right-click
+        [[YELLOW]]while holding an ax to activate Tree Feller. This will
+        [[YELLOW]]cause the entire tree to break instantly, dropping all
+        [[YELLOW]]of its logs at once.
+      '2': |-
+        [[DARK_AQUA]]How does Leaf Blower work?
+        [[YELLOW]]Leaf Blower is a passive ability that will cause leaf
+        [[YELLOW]]blocks to break instantly when hit with an axe. By default,
+        [[YELLOW]]this ability unlocks at level 100.
+      '3': |-
+        [[DARK_AQUA]]How do Double Drops work?
+        [[YELLOW]]This passive ability gives you a chance to obtain an extra
+        [[YELLOW]]block for every log you chop.
+  Herbalism:
+    Section:
+      '1': "[[DARK_AQUA]]Compatible Blocks\n[[YELLOW]]Wheat, Potatoes, Carrots, Melons,\
+        \ \n[[YELLOW]]Pumpkins, Sugar Canes, Cocoa Beans, Flowers, Cacti, Mushrooms,\n\
+        [[YELLOW]]Nether Wart, Lily Pads, and Vines."
+      '2': |-
+        [[DARK_AQUA]]How does Green Terra work?
+        [[YELLOW]]Green Terra is an active ability, you can right-click
+        [[YELLOW]]while holding a hoe to activate Green Terra.
+        [[YELLOW]]Green Terra grants players a chance to get 3x drops from
+        [[YELLOW]]harvesting plants. It also gives players the ability to
+        [[YELLOW]]spread life into blocks and transform them using seeds
+        [[YELLOW]]from your inventory.
+      '0': |-
+        [[DARK_AQUA]]About Herbalism:
+        [[YELLOW]]Herbalism is about collecting herbs and plants.
+
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]Collect plants and herbs.
+      '7': |-
+        [[DARK_AQUA]]How do Double Drops work?
+        [[YELLOW]]This passive ability gives players more yield from their
+        [[YELLOW]]harvests.
+      '5': "[[DARK_AQUA]]How does Farmer's Diet work?\n[[YELLOW]]This passive skill\
+        \ increases the amount of hunger restored \n[[YELLOW]]when eating Bread, Cookies,\
+        \ Melons, Mushroom Soup, Carrots,\n[[YELLOW]]and Potatoes."
+      '6': |-
+        [[DARK_AQUA]]How does Hylian Luck work?
+        [[YELLOW]]This passive ability gives you a chance to find rare items
+        [[YELLOW]]when certain blocks are broken with a sword.
+      '3': |-
+        [[DARK_AQUA]]How does Green Thumb (Crops) work?
+        [[YELLOW]]This passive ability will automatically replant crops when
+        [[YELLOW]]harvesting.
+        [[YELLOW]]Your chance of success depends on your Herbalism skill.
+      '4': |-
+        [[DARK_AQUA]]How does Green Thumb (Cobble/Stone Brick/Dirt) work?
+        [[YELLOW]]This active ability allows you to turn blocks into their
+        [[YELLOW]]"plant-related" counterparts. You can do this by right-clicking
+        [[YELLOW]]a block, while holding seeds. This will consume 1 seed.
+  Excavation:
+    Section:
+      '4': |-
+        [[DARK_AQUA]]How does Treasure Hunter work?
+        [[YELLOW]]Every possible treasure for Excavation has its own
+        [[YELLOW]]skill level requirement for it to drop, as a result it's
+        [[YELLOW]]difficult to say how much it is helping you.
+        [[YELLOW]]Just keep in mind that the higher your Excavation skill
+        [[YELLOW]]is, the more treasures that can be found.
+        [[YELLOW]]And also keep in mind that each type of Excavation
+        [[YELLOW]]compatible material has its own unique list of treasures.
+        [[YELLOW]]In other words you will find different treasures in Dirt
+        [[YELLOW]]than you would in Gravel.
+      '5': |-
+        [[DARK_AQUA]]Notes about Excavation:
+        [[YELLOW]]Excavation drops are completely customizeable
+        [[YELLOW]]So results vary server to server.
+      '2': |-
+        [[DARK_AQUA]]How to use Giga Drill Breaker:
+        [[YELLOW]]With a shovel in hand right click to ready your tool.
+        [[YELLOW]]Once in this state you have about 4 seconds to make
+        [[YELLOW]]contact with Excavation compatible materials this will
+        [[YELLOW]]activate Giga Drill Breaker.
+      '3': |-
+        [[DARK_AQUA]]What is Giga Drill Breaker?
+        [[YELLOW]]Giga Drill Breaker is an ability with a cooldown
+        [[YELLOW]]tied to Excavation skill. It triples your chance
+        [[YELLOW]]of finding treasures and enables instant break
+        [[YELLOW]]on Excavation materials.
+      '0': |-
+        [[DARK_AQUA]]About Excavation:
+        [[YELLOW]]Excavation is the act of digging up dirt to find treasures.
+        [[YELLOW]]By excavating the land you will find treasures.
+        [[YELLOW]]The more you do this the more treasures you can find.
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]To gain XP in this skill you must dig with a shovel in hand.
+        [[YELLOW]]Only certain materials can be dug up for treasures and XP.
+      '1': |-
+        [[DARK_AQUA]]Compatible Materials:
+        [[YELLOW]]Grass, Dirt, Sand, Clay, Gravel, Mycelium, Soul Sand, Snow
+  Available: '[[DARK_AQUA]]Guide for {0} available - type /{1} ? [page]'
+  Archery:
+    Section:
+      '0': |-
+        [[DARK_AQUA]]About Archery:
+        [[YELLOW]]Archery is about shooting with your bow and arrow.
+        [[YELLOW]]It provides various combat bonuses, such as a damage boost
+        [[YELLOW]]that scales with your level and the ability to daze your
+        [[YELLOW]]opponents in PvP. In addition to this, you can retrieve
+        [[YELLOW]]some of your spent arrows from the corpses of your foes.
+
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]To gain XP in this skill you need to shoot mobs or
+        [[YELLOW]]other players.
+      '1': |-
+        [[DARK_AQUA]]How does Skill Shot work?
+        [[YELLOW]]Skill Shot provides additional damage to your shots.
+        [[YELLOW]]The bonus damage from Skill Shot increases as you
+        [[YELLOW]]level in Archery.
+        [[YELLOW]]With the default settings, your archery damage increases 10%
+        [[YELLOW]]every 50 levels, to a maximum of 200% bonus damage.
+      '2': |-
+        [[DARK_AQUA]]How does Daze work?
+        [[YELLOW]]You have a passive chance to daze other players when
+        [[YELLOW]]you shoot them. When Daze triggers it forces your opponents
+        [[YELLOW]]to look straight up for a short duration.
+        [[YELLOW]]A Daze shot also deals an additional 4 damage (2 hearts).
+      '3': |-
+        [[DARK_AQUA]]How does Arrow Retrieval work?
+        [[YELLOW]]You have a passive chance to retrieve some of your arrows
+        [[YELLOW]]when you kill a mob with your bow.
+        [[YELLOW]]This chance increases as you level in Archery.
+        [[YELLOW]]By default, this ability increases by 0.1% per level, up to 100%
+        [[YELLOW]]at level 1000.
+  Taming:
+    Section:
+      '0': |-
+        [[DARK_AQUA]]About Taming:
+        [[YELLOW]]Taming will give players various combat bonuses when using
+        [[YELLOW]]tamed wolves.
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]To gain XP in this skill, you need to tame wolves/ocelots or
+        [[YELLOW]]get into combat with your wolves.
+      '1': |-
+        [[DARK_AQUA]]How does Call of the Wild work?
+        [[YELLOW]]Call of the Wild is an active ability that will allow you to summon
+        [[YELLOW]]a wolf or an ocelot by your side. You can do this by
+        [[YELLOW]]left-clicking while holding bones or fish.
+      '2': |-
+        [[DARK_AQUA]]How does Beast Lore work?
+        [[YELLOW]]Beast Lore allows players to inspect pets and to check the
+        [[YELLOW]]stats of wolves and ocelots. Left-click a wolf or ocelot to use
+        [[YELLOW]]Beast Lore.
+      '3': |-
+        [[DARK_AQUA]]How does Gore work?
+        [[YELLOW]]Gore is a passive ability that has a chance of inflicting a
+        [[YELLOW]]bleeding effect on your wolves' targets.
+      '4': |-
+        [[DARK_AQUA]]How does Sharpened Claws work?
+        [[YELLOW]]Sharpened Claws provides a damage bonus to damage dealt
+        [[YELLOW]]by wolves. The damage bonus depends on your Taming level.
+      '5': |-
+        [[DARK_AQUA]]How does Environmentally Aware work?
+        [[YELLOW]]This passive ability will allow wolves to teleport to you when
+        [[YELLOW]]they get near hazards, such as Cacti/Lava. It will also give
+        [[YELLOW]]wolves fall damage immunity.
+      '6': |-
+        [[DARK_AQUA]]How does Thick Fur work?
+        [[YELLOW]]This passive ability will reduce damage and make wolves
+        [[YELLOW]]fire resistant.
+      '7': |-
+        [[DARK_AQUA]]How does Shock Proof work?
+        [[YELLOW]]This passive ability reduces damage done to wolves
+        [[YELLOW]]from explosions.
+      '8': |-
+        [[DARK_AQUA]]How does Fast Food Service work?
+        [[YELLOW]]This passive ability gives wolves a chance to heal whenever
+        [[YELLOW]]they perform an attack.
+  Page:
+    OutOfRange: That page does not exist, there are only {0} total pages.
+    Invalid: Not a valid page number!
+  Axes:
+    Section:
+      '2': |-
+        [[DARK_AQUA]]How does Critical Strikes work?
+        [[YELLOW]]Critical Strikes is a passive ability which gives players a
+        [[YELLOW]]chance to deal additional damage.
+        [[YELLOW]]With the default settings, every 2 skill levels in Axes awards a
+        [[YELLOW]]0.1% chance to deal a Critical Strike, causing 2.0 times damage
+        [[YELLOW]]to mobs or 1.5 times damage against other players.
+      '1': |-
+        [[DARK_AQUA]]How does Skull Splitter work?
+        [[YELLOW]]This ability allows you to deal an AoE (Area of Effect) hit.
+        [[YELLOW]]This AoE hit will deal half as much damage as you did to the
+        [[YELLOW]]main target, so it's great for clearing out large piles of mobs.
+      '0': |-
+        [[DARK_AQUA]]About Axes:
+        [[YELLOW]]With the Axes skill you can use your axe for much more then
+        [[YELLOW]]just deforesting! You can hack and chop away at mobs
+        [[YELLOW]]and players to gain XP, hitting mobs with the effect of
+        [[YELLOW]]knockback and inflicting DEADLY criticals on mobs and players.
+        [[YELLOW]]Your axe also becomes a hand-held woodchipper,
+        [[YELLOW]]breaking down the enemy's armor with ease as your level
+        [[YELLOW]]increases.
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]To gain XP in this skill you need hit other mobs or players
+        [[YELLOW]]with an Axe.
+      '5': |-
+        [[DARK_AQUA]]How does Greater Impact work?
+        [[YELLOW]]You have a passive chance to achieve a greater impact when
+        [[YELLOW]]hitting mobs or players with your axe.
+        [[YELLOW]]By default this chance is 25%. This passive ability has an
+        [[YELLOW]]extreme knockback effect, similar to the Knockback II
+        [[YELLOW]]enchantment. In addition, it deals bonus damage to the target.
+      '4': |-
+        [[DARK_AQUA]]How does Armor Impact work?
+        [[YELLOW]]Strike with enough force to shatter armor!
+        [[YELLOW]]Armor Impact has a passive chance to damage your
+        [[YELLOW]]opponent's armor. This damage increases as you level in Axes.
+      '3': |-
+        [[DARK_AQUA]]How does Axe Mastery work?
+        [[YELLOW]]Axe Mastery is a passive ability that will add additional damage
+        [[YELLOW]]to your hits when using Axes.
+        [[YELLOW]]By default, the bonus damage increases by 1 every 50 levels,
+        [[YELLOW]]up to a cap of 4 extra damage at level 200.
+  Usage: '[[RED]] Usage is /{0} ? [page]'
+  Swords:
+    Section:
+      '2': "[[DARK_AQUA]]How does Counter Attack work?\n[[YELLOW]]Counter Attack is\
+        \ an active ability. When blocking and taking\n[[YELLOW]]hits from mobs, you\
+        \ will have a chance to reflect 50% of \n[[YELLOW]]the damage that was taken."
+      '3': "[[DARK_AQUA]]How does Bleed work?\n[[YELLOW]]Bleed causes enemies to take\
+        \ damage every two seconds. The \n[[YELLOW]]target will bleed until the effect\
+        \ wears off, or death, \n[[YELLOW]]whichever comes first.\n[[YELLOW]]The duration\
+        \ of the bleed is increased by your sword skill."
+      '0': "[[DARK_AQUA]]About Swords:\n[[YELLOW]]This skill awards combat bonuses\
+        \ to anyone fighting with a\n[[YELLOW]]sword.\n\n[[DARK_AQUA]]XP GAIN:\n[[YELLOW]]XP\
+        \ is gained based on the amount of damage dealt to mobs or \n[[YELLOW]]other\
+        \ players when wielding a sword."
+      '1': "[[DARK_AQUA]]How does Serrated Strikes work?\n[[YELLOW]]Serrated Strikes\
+        \ is an active ability, you can activate it by\n[[YELLOW]]right-clicking with\
+        \ a sword. This ability allows you to deal \n[[YELLOW]]an AoE (Area of Effect)\
+        \ hit. This AoE will do a bonus 25%\n[[YELLOW]]damage and will inflict a bleed\
+        \ effect that lasts for 5 ticks."
+  Mining:
+    Section:
+      '4': |-
+        [[DARK_AQUA]]How to use Blast Mining:
+        [[YELLOW]]With a detonator in hand, which is a flint & steel by default,
+        [[YELLOW]]crouch and right-click on TNT from a distance. This will cause the TNT
+        [[YELLOW]]to instantly explode.
+      '5': |-
+        [[DARK_AQUA]]How does Blast Mining work?
+        [[YELLOW]]Blast Mining is an ability with a cooldown tied to the Mining
+        [[YELLOW]]skill. It gives bonuses when mining with TNT and allows you
+        [[YELLOW]]to remote detonate TNT. There are three parts to Blast Mining.
+        [[YELLOW]]The first part is Bigger Bombs, which increases blast radius.
+        [[YELLOW]]The second is Demolitions Expert, which decreases damage
+        [[YELLOW]]from TNT explosions. The third part simply increases the
+        [[YELLOW]]amount of ores dropped from TNT and decreases the
+        [[YELLOW]]debris dropped.
+      '0': |-
+        [[DARK_AQUA]]About Mining:
+        [[YELLOW]]Mining consists of mining stone and ores. It provides bonuses
+        [[YELLOW]]to the amount of materials dropped while mining.
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]To gain XP in this skill, you must mine with a pickaxe in hand.
+        [[YELLOW]]Only certain blocks award XP.
+      '1': |-
+        [[DARK_AQUA]]Compatible Materials:
+        [[YELLOW]]Stone, Coal Ore, Iron Ore, Gold Ore, Diamond Ore, Redstone Ore,
+        [[YELLOW]]Lapis Ore, Obsidian, Mossy Cobblestone, Ender Stone,
+        [[YELLOW]]Glowstone, and Netherrack.
+      '2': |-
+        [[DARK_AQUA]]How to use Super Breaker:
+        [[YELLOW]]With a pickaxe in your hand, right click to ready your tool.
+        [[YELLOW]]Once in this state, you have about 4 seconds to make contact
+        [[YELLOW]]with Mining compatible materials, which will activate Super
+        [[YELLOW]]Breaker.
+      '3': |-
+        [[DARK_AQUA]]What is Super Breaker?
+        [[YELLOW]]Super Breaker is an ability with a cooldown tied to the Mining
+        [[YELLOW]]skill. It triples your chance of extra items dropping and
+        [[YELLOW]]enables instant break on Mining materials.
+  Fishing:
+    Section:
+      '1': "[[DARK_AQUA]]How does Treasure Hunter work?\n[[YELLOW]]This ability allows\
+        \ you to find treasure from fishing \n[[YELLOW]]with a small chance of the\
+        \ items being enchanted.\n[[YELLOW]]Every possible treasure for Fishing has\
+        \ a chance\n[[YELLOW]]to drop on any level. It depends however\n[[YELLOW]]what\
+        \ the rarity of the item is how often it will drop.\n[[YELLOW]]The higher\
+        \ your Fishing skill is, the better\n[[YELLOW]]your chances are to find better\
+        \ treasures."
+      '0': |-
+        [[DARK_AQUA]]About Fishing:
+        [[YELLOW]]With the Fishing skill, Fishing is exciting again!
+        [[YELLOW]]Find hidden treasures, and shake items off mobs.
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]Catch fish.
+      '3': |-
+        [[DARK_AQUA]]How does Master Angler work?
+        [[YELLOW]]This passive skill increases the bite chance while fishing.
+        [[YELLOW]]When you've unlocked this ability, fishing while in
+        [[YELLOW]]a boat or when an ocean biome doubles the bite chance.
+      '2': |-
+        [[DARK_AQUA]]How does Ice Fishing work?
+        [[YELLOW]]This passive skill allows you to fish in ice lakes!
+        [[YELLOW]]Cast your fishing rod in an ice lake and the ability will
+        [[YELLOW]]create a small hole in the ice to fish in.
+      '5': "[[DARK_AQUA]]How does Fisherman's Diet work?\n[[YELLOW]]This passive skill\
+        \ increases the amount of hunger restored \n[[YELLOW]]from eating fish."
+      '4': "[[DARK_AQUA]]How does Shake work?\n[[YELLOW]]This active ability allows\
+        \ you to shake items loose from mobs\n[[YELLOW]]by hooking them with the fishing\
+        \ rod. \n[[YELLOW]]Mobs will drop items they would normally drop on death.\n\
+        [[YELLOW]]It is also possible to acquire mob skulls, which are normally \n\
+        [[YELLOW]]unobtainable in survival mode."
+      '6': |-
+        [[DARK_AQUA]]Notes about Fishing:
+        [[YELLOW]]Fishing drops are completely customizable,
+        [[YELLOW]]so results vary server to server.
+  Unarmed:
+    Section:
+      '5': |-
+        [[DARK_AQUA]]How does Disarm work?
+        [[YELLOW]]This passive ability allows players to disarm other players,
+        [[YELLOW]]causing the target's equipped item to fall to the ground.
+      '4': |-
+        [[DARK_AQUA]]How does Iron Grip work?
+        [[YELLOW]]Iron Grip is a passive ability that counters disarm. As your
+        [[YELLOW]]unarmed level increases, the chance of preventing a disarm increases.
+      '1': |-
+        [[DARK_AQUA]]How does Berserk work?
+        [[YELLOW]]Beserk is an active ability that is activated by
+        [[YELLOW]]right-clicking. While in Beserk mode, you deal 50% more
+        [[YELLOW]]damage and you can break weak materials instantly, such as
+        [[YELLOW]]Dirt and Grass.
+      '0': "[[DARK_AQUA]]About Unarmed:\n[[YELLOW]]Unarmed will give players various\
+        \ combat bonuses when using\n[[YELLOW]]your fists as a weapon. \n\n[[DARK_AQUA]]XP\
+        \ GAIN:\n[[YELLOW]]XP is gained based on the amount of damage dealt to mobs\
+        \ \n[[YELLOW]]or other players when unarmed."
+      '3': |-
+        [[DARK_AQUA]]How does Arrow Deflect work?
+        [[YELLOW]]Arrow Deflect is a passive ability that gives you a chance
+        [[YELLOW]]to deflect arrows shot by Skeletons or other players.
+        [[YELLOW]]The arrow will fall harmlessly to the ground.
+      '2': |-
+        [[DARK_AQUA]]How does Iron Arm work?
+        [[YELLOW]]Iron Arm increases the damage dealt when hitting mobs or
+        [[YELLOW]]players with your fists.
+  Alchemy:
+    Section:
+      '6': |-
+        [[DARK_AQUA]]Concoctions tier 6 ingredients:
+        [[YELLOW]]Fern (Potion of Saturation)
+
+        [[DARK_AQUA]]Concoctions tier 7 ingredients:
+        [[YELLOW]]Poisonous Potato (Potion of Decay)
+
+        [[DARK_AQUA]]Concoctions tier 8 ingredients:
+        [[YELLOW]]Regular Golden Apple (Potion of Resistance)
+      '5': |-
+        [[DARK_AQUA]]Concoctions tier 4 ingredients:
+        [[YELLOW]]Apple (Potion of Health Boost)
+        [[YELLOW]]Rotten Flesh (Potion of Hunger)
+
+        [[DARK_AQUA]]Concoctions tier 5 ingredients:
+        [[YELLOW]]Brown Mushroom (Potion of Nausea)
+        [[YELLOW]]Ink Sack (Potion of Blindness)
+      '0': |-
+        [[DARK_AQUA]]About Alchemy:
+        [[YELLOW]]Alchemy is about brewing potions.
+        [[YELLOW]]It provides a speed increase in the potion brew time, as well
+        [[YELLOW]]as the addition of new (previously) unobtainable potions.
+
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]To gain XP in this skill you need to brew potions.
+      '2': |-
+        [[DARK_AQUA]]How does Concoctions work?
+        [[YELLOW]]Concoctions allows brewing of more potions with custom ingredients.
+        [[YELLOW]]Which special ingredients are unlocked is determined
+        [[YELLOW]]by your Rank. There are 8 ranks to unlock.
+      '1': |-
+        [[DARK_AQUA]]How does Catalysis work?
+        [[YELLOW]]Catalysis speeds of the brewing process, with a
+        [[YELLOW]]max speed of 4x at level 1000.
+        [[YELLOW]]This ability is unlocked at level 100 by default.
+      '4': |-
+        [[DARK_AQUA]]Concoctions tier 2 ingredients:
+        [[YELLOW]]Carrot (Potion of Haste)
+        [[YELLOW]]Slimeball (Potion of Dullness)
+
+        [[DARK_AQUA]]Concoctions tier 3 ingredients:
+        [[YELLOW]]Quartz (Potion of Absorption)
+        [[YELLOW]]Red Mushroom (Potion of Leaping)
+      '3': |-
+        [[DARK_AQUA]]Concoctions tier 1 ingredients:
+        [[YELLOW]]Blaze Powder, Fermented Spider Eye, Ghast Tear, Redstone,
+        [[YELLOW]]Glowstone Dust, Sugar, Glistering Melon, Golden Carrot,
+        [[YELLOW]]Magma Cream, Nether Wart, Spider Eye, Suplhur, Water Lily,
+        [[YELLOW]]Pufferfish
+        [[YELLOW]](Vanilla Potions)
+  Smelting:
+    Section:
+      '0': Coming soon...
+  Repair:
+    Section:
+      '4': |-
+        [[DARK_AQUA]]How does Arcane Forging work?
+        [[YELLOW]]This passive ability allows you to repair items with a certain
+        [[YELLOW]]chance of maintaining its enchantments. The enchants may be
+        [[YELLOW]]kept at their existing levels, downgraded to a lower level,
+        [[YELLOW]]or lost entirely.
+      '3': |-
+        [[DARK_AQUA]]How does Super Repair work?
+        [[YELLOW]]Super Repair is a passive ability. When repairing an item,
+        [[YELLOW]]it grants players a chance to repair an item with
+        [[YELLOW]]double effectiveness.
+      '2': |-
+        [[DARK_AQUA]]How does Repair Mastery work?
+        [[YELLOW]]Repair Mastery increases the repair amount. The extra amount
+        [[YELLOW]]repaired is influenced by your Repair skill level.
+      '1': "[[DARK_AQUA]]How can I use Repair?\n[[YELLOW]]Place down a mcMMO Anvil\
+        \ and right-click to repair the item \n[[YELLOW]]you're currently holding.\
+        \ This consumes 1 item on every use."
+      '0': |-
+        [[DARK_AQUA]]About Repair:
+        [[YELLOW]]Repair allows you to use an iron block to repair armor and
+        [[YELLOW]]tools.
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]Repair tools or armor using the mcMMO Anvil. This is an
+        [[YELLOW]]iron block by default and should not be confused with
+        [[YELLOW]]the Vanilla Minecraft Anvil.
+  Salvage:
+    Section:
+      '1': |-
+        [[DARK_AQUA]]How can I use Salvage?
+        [[YELLOW]]Place down a mcMMO Salvage Anvil and right-click to salvage
+        [[YELLOW]]the item you're currently holding. This will break apart the item,
+        [[YELLOW]]and give back materials used to craft the item.
+
+        [[YELLOW]]For example, salvaging an iron pickaxe will give you iron bars.
+      '2': |-
+        [[DARK_AQUA]]How does Advanced Salvage work?
+        [[YELLOW]]When unlocked, this ability allows you to salvage damaged items.
+        [[YELLOW]]The yield percentage increases as you level up. A higher yield
+        [[YELLOW]]means that you can get more materials back.
+        [[YELLOW]]With advanced salvage you will always get 1 material back,
+        [[YELLOW]]unless the item is too damaged. So you don't have to worry
+        [[YELLOW]]about destroying items without getting anything in return.
+      '0': |-
+        [[DARK_AQUA]]About Salvage:
+        [[YELLOW]]Salvage allows you to use an gold block to salvage armor and
+        [[YELLOW]]tools.
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]Salvage is a child skill of Repair and Fishing, your Salvage
+        [[YELLOW]]skill level is based on your Fishing and Repair skill levels.
+      '3': |-
+        [[DARK_AQUA]]To illustrate how this works, here's an example:
+        [[YELLOW]]Let's say we salvage a gold pickaxe which is damaged for 20%,
+        [[YELLOW]]this means that the maximum amount you could get is only 2
+        [[YELLOW]](because the pick is crafted with 3 ingots - each worth
+        [[YELLOW]]33,33% durability) which is equal to 66%. If your yield
+        [[YELLOW]]percentage is below 66% you are not able to get 2 ingots.
+        [[YELLOW]]If it is above this value you are able to gain the "full amount",
+        [[YELLOW]]which means that you will get 2 ingots.
+      '4': |-
+        [[DARK_AQUA]]How does Arcane Salvage work?
+        [[YELLOW]]This ability allows you to get enchanted books when salvaging
+        [[YELLOW]]enchanted items. Depending on your level the chance of
+        [[YELLOW]]successfully extracting a full or partial enchantment varies.
+
+        [[YELLOW]]When an enchantment is partially extracted, the enchantment
+        [[YELLOW]]book will have a lower level enchantment compared to what
+        [[YELLOW]]it was on the item.
+  Header: '[[GOLD]]-=[[GREEN]]{0} Guide[[GOLD]]=-'
+  Acrobatics:
+    Section:
+      '0': |-
+        [[DARK_AQUA]]About Acrobatics:
+        [[YELLOW]]Acrobatics is the art of moving gracefully in mcMMO.
+        [[YELLOW]]It provides combat bonuses and environment damage bonuses.
+
+        [[DARK_AQUA]]XP GAIN:
+        [[YELLOW]]To gain XP in this skill you need to perform a dodge
+        [[YELLOW]]in combat or survive falls from heights that damage you.
+      '2': |-
+        [[DARK_AQUA]]How does Dodge work?
+        [[YELLOW]]Dodge is a passive chance when you are
+        [[YELLOW]]injured in combat to halve the damage taken.
+        [[YELLOW]]It is tied to your skill level.
+      '1': |-
+        [[DARK_AQUA]]How does Rolling work?
+        [[YELLOW]]You have a passive chance when you take fall damage
+        [[YELLOW]]to negate the damage done. You can hold the sneak button to
+        [[YELLOW]]double your chances during the fall.
+        [[YELLOW]]This triggers a Graceful Roll instead of a standard one.
+        [[YELLOW]]Graceful Rolls are like regular rolls but are twice as likely to
+        [[YELLOW]]occur and provide more damage safety than regular rolls.
+        [[YELLOW]]Rolling chance is tied to your skill level
+Item:
+  ChimaeraWing:
+    Pass: '**CHIMAERA WING**'
+    Lore: '[[GRAY]]Teleports you to your bed.'
+    Fail: '**CHIMAERA WING FAILED!**'
+    Name: Chimaera Wing
+  FluxPickaxe:
+    Lore:
+      '2': '[[GRAY]]Requires Smelting level {0}+'
+      '1': '[[GRAY]]Has a chance of instantly smelting ores.'
+    Name: Flux Pickaxe
+  Injured:
+    Wait: You were injured recently and must wait to use this. [[YELLOW]]({0}s)
+  Generic:
+    Wait: '[[RED]]You need to wait before you can use this again! [[YELLOW]]({0}s)'
+Combat:
+  BeastLoreOwner: '[[DARK_AQUA]]Owner ([[RED]]{0}[[DARK_AQUA]])'
+  BeastLoreHealth: '[[DARK_AQUA]]Health ([[GREEN]]{0}[[DARK_AQUA]]/{1})'
+  StruckByGore: '[[RED]]**YOU HAVE BEEN GORED**'
+  ArrowDeflect: '[[WHITE]]**ARROW DEFLECT**'
+  Gore: '[[GREEN]]**GORED**'
+  TargetDazed: Target was [[DARK_RED]]Dazed
+  TouchedFuzzy: '[[DARK_RED]]Touched Fuzzy. Felt Dizzy.'
+  BeastLore: '[[GREEN]]**BEAST LORE**'
+UpdateChecker:
+  NewAvailable: There is a new version available on BukkitDev.
+  Outdated: You are using an outdated version of mcMMO!
+Effects:
+  Template: '[[DARK_AQUA]]{0}: [[GREEN]]{1}'
+  Level: '[[DARK_GRAY]]LVL: [[GREEN]]{0} [[DARK_AQUA]]XP[[YELLOW]]([[GOLD]]{1}[[YELLOW]]/[[GOLD]]{2}[[YELLOW]])'
+  Child: '[[DARK_GRAY]]LVL: [[GREEN]]{0}'
+  Effects: EFFECTS
+  Parent: '[[GOLD]]{0} -'
+mcMMO:
+  NoSkillNote: '[[DARK_GRAY]]If you don''t have access to a skill it will not be shown
+    here.'
+  Description: '[[DARK_AQUA]]About the [[YELLOW]]mcMMO[[DARK_AQUA]] Project:,[[GOLD]]mcMMO
+    is an [[RED]]open source[[GOLD]] RPG mod created in February 2011,[[GOLD]]by [[BLUE]]nossr50[[GOLD]].
+    The goal is to provide a quality RPG experience.,[[DARK_AQUA]]Tips:,[[GOLD]] -
+    [[GREEN]]Use [[RED]]/mcmmo help[[GREEN]] to see commands,[[GOLD]] - [[GREEN]]Type
+    [[RED]]/SKILLNAME[[GREEN]] to see detailed skill info,[[DARK_AQUA]]Developers:,[[GOLD]]
+    - [[GREEN]]nossr50 [[BLUE]](Founder),[[GOLD]] - [[GREEN]]GJ [[BLUE]](Project Lead),[[GOLD]]
+    - [[GREEN]]NuclearW [[BLUE]](Developer),[[GOLD]] - [[GREEN]]bm01 [[BLUE]](Developer),[[GOLD]]
+    - [[GREEN]]TfT_02 [[BLUE]](Developer),[[GOLD]] - [[GREEN]]Glitchfinder [[BLUE]](Developer),[[GOLD]]
+    - [[GREEN]]t00thpick1 [[BLUE]](Developer),[[DARK_AQUA]]Useful Links:,[[GOLD]]
+    - [[GREEN]]https://github.com/mcMMO-Dev/mcMMO/issues[[GOLD]] Bug Reporting,[[GOLD]]
+    - [[GREEN]]#mcmmo @ irc.esper.net[[GOLD]] IRC Chat,'
+  NoPermission: '[[DARK_RED]]Insufficient permissions.'
+  NoInvites: '[[RED]]You have no invites at this time'
+Profile:
+  Loading:
+    Success: '[[GREEN]]Your mcMMO profile has been loaded.'
+    Failure: |-
+      [[RED]]mcMMO still cannot load your data. You may want to [[AQUA]]contact the server owner.
+      [[YELLOW]]You can still play on the server, but you will have [[BOLD]]no mcMMO levels[[YELLOW]] and any XP you get [[BOLD]]will not be saved[[YELLOW]].
+    AdminFailureNotice: '[[DARK_RED]][A][[RED]] mcMMO was unable to load the player
+      data for [[YELLOW]]{0}[[RED]]. [[LIGHT_PURPLE]]Please inspect your database
+      setup.'
+Inspect:
+  TooFar: '[[RED]]You are too far away to inspect that player!'
+  OfflineStats: mcMMO Stats for Offline Player [[YELLOW]]{0}
+  Offline: '[[RED]]You do not have permission to inspect offline players!'
+  Stats: '[[GREEN]]mcMMO Stats for [[YELLOW]]{0}'
+Ability:
+  Generic:
+    Refresh: '[[GREEN]]**ABILITIES REFRESHED!**'
+    Template:
+      Lock: '[[GRAY]]{0}'
+Teleport:
+  Commencing: '[[GRAY]]Commencing teleport in [[GOLD]]({0}) [[GRAY]]seconds, please
+    stand still...'
+  Cancelled: '[[DARK_RED]]Teleportation canceled!'
+Anvil:
+  Unbreakable: This item is unbreakable!
