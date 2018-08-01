@@ -1,43 +1,34 @@
 package com.gmail.nossr50.skills.herbalism;
 
-import java.util.Collection;
-import java.util.List;
-
-import org.bukkit.CropState;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.NetherWartsState;
-import org.bukkit.block.BlockState;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.material.CocoaPlant;
-import org.bukkit.material.CocoaPlant.CocoaPlantSize;
-import org.bukkit.material.Crops;
-import org.bukkit.material.NetherWarts;
-import org.bukkit.metadata.FixedMetadataValue;
-
-import com.gmail.nossr50.mcMMO;
 import com.gmail.nossr50.config.Config;
 import com.gmail.nossr50.config.experience.ExperienceConfig;
 import com.gmail.nossr50.config.treasure.TreasureConfig;
 import com.gmail.nossr50.datatypes.mods.CustomBlock;
 import com.gmail.nossr50.datatypes.player.McMMOPlayer;
-import com.gmail.nossr50.datatypes.skills.AbilityType;
-import com.gmail.nossr50.datatypes.skills.SecondaryAbility;
-import com.gmail.nossr50.datatypes.skills.SkillType;
-import com.gmail.nossr50.datatypes.skills.ToolType;
-import com.gmail.nossr50.datatypes.skills.XPGainReason;
+import com.gmail.nossr50.datatypes.skills.*;
 import com.gmail.nossr50.datatypes.treasure.HylianTreasure;
 import com.gmail.nossr50.locale.LocaleLoader;
+import com.gmail.nossr50.mcMMO;
 import com.gmail.nossr50.runnables.skills.HerbalismBlockUpdaterTask;
 import com.gmail.nossr50.skills.SkillManager;
-import com.gmail.nossr50.util.BlockUtils;
-import com.gmail.nossr50.util.EventUtils;
-import com.gmail.nossr50.util.Misc;
-import com.gmail.nossr50.util.Permissions;
-import com.gmail.nossr50.util.StringUtils;
+import com.gmail.nossr50.util.*;
 import com.gmail.nossr50.util.skills.SkillUtils;
+import org.bukkit.CropState;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.NetherWartsState;
+import org.bukkit.block.BlockState;
+import org.bukkit.block.data.Ageable;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.material.CocoaPlant;
+import org.bukkit.material.CocoaPlant.CocoaPlantSize;
+import org.bukkit.material.NetherWarts;
+import org.bukkit.metadata.FixedMetadataValue;
+
+import java.util.Collection;
+import java.util.List;
 
 public class HerbalismManager extends SkillManager {
     public HerbalismManager(McMMOPlayer mcMMOPlayer) {
@@ -51,8 +42,8 @@ public class HerbalismManager extends SkillManager {
     public boolean canGreenThumbBlock(BlockState blockState) {
         Player player = getPlayer();
         ItemStack item = player.getInventory().getItemInMainHand();
-        
-        return item.getAmount() > 0 && item.getType() == Material.SEEDS && BlockUtils.canMakeMossy(blockState) && Permissions.greenThumbBlock(player, blockState.getType());
+
+        return item.getAmount() > 0 && item.getType() == Material.WHEAT_SEEDS && BlockUtils.canMakeMossy(blockState) && Permissions.greenThumbBlock(player, blockState.getType());
     }
 
     public boolean canUseShroomThumb(BlockState blockState) {
@@ -104,7 +95,7 @@ public class HerbalismManager extends SkillManager {
         }
 
         PlayerInventory playerInventory = player.getInventory();
-        ItemStack seed = new ItemStack(Material.SEEDS);
+        ItemStack seed = new ItemStack(Material.WHEAT_SEEDS);
 
         if (!playerInventory.containsAtLeast(seed, 1)) {
             player.sendMessage(LocaleLoader.getString("Herbalism.Ability.GTe.NeedMore"));
@@ -123,13 +114,13 @@ public class HerbalismManager extends SkillManager {
     public void herbalismBlockCheck(BlockState blockState) {
         Player player = getPlayer();
         Material material = blockState.getType();
-        boolean oneBlockPlant = !(material == Material.CACTUS || material == Material.CHORUS_PLANT || material == Material.SUGAR_CANE_BLOCK);
+        boolean oneBlockPlant = !(material == Material.CACTUS || material == Material.CHORUS_PLANT || material == Material.SUGAR_CANE);
 
         // Prevents placing and immediately breaking blocks for exp
         if (oneBlockPlant && mcMMO.getPlaceStore().isTrue(blockState)) {
             return;
         }
-        
+
         if (!canBlockCheck()) {
             return;
         }
@@ -151,7 +142,7 @@ public class HerbalismManager extends SkillManager {
             if(material == Material.CHORUS_FLOWER && blockState.getRawData() != 5) {
                 return;
             }
-            xp = ExperienceConfig.getInstance().getXp(skill, blockState.getData());
+            xp = ExperienceConfig.getInstance().getXp(skill, blockState.getBlockData());
 
             if (Config.getInstance().getDoubleDropsEnabled(skill, material) && Permissions.secondaryAbilityEnabled(player, SecondaryAbility.HERBALISM_DOUBLE_DROPS)) {
                 drops = blockState.getBlock().getDrops();
@@ -208,7 +199,7 @@ public class HerbalismManager extends SkillManager {
             return false;
         }
 
-        String friendly = StringUtils.getFriendlyConfigMaterialDataString(blockState.getData());
+        String friendly = StringUtils.getFriendlyConfigBlockDataString(blockState.getBlockData());
         if (!TreasureConfig.getInstance().hylianMap.containsKey(friendly))
             return false;
         List<HylianTreasure> treasures = TreasureConfig.getInstance().hylianMap.get(friendly);
@@ -279,23 +270,23 @@ public class HerbalismManager extends SkillManager {
         Material seed = null;
 
         switch (blockState.getType()) {
-            case CARROT:
-                seed = Material.CARROT_ITEM;
+            case CARROTS:
+                seed = Material.CARROT;
                 break;
 
-            case CROPS:
-                seed = Material.SEEDS;
+            case WHEAT:
+                seed = Material.WHEAT_SEEDS;
                 break;
 
-            case NETHER_WARTS:
-                seed = Material.NETHER_STALK;
+            case NETHER_WART_BLOCK:
+                seed = Material.NETHER_WART;
                 break;
 
-            case POTATO:
-                seed = Material.POTATO_ITEM;
+            case POTATOES:
+                seed = Material.POTATO;
                 break;
 
-            case BEETROOT_BLOCK:
+            case BEETROOTS:
                 seed = Material.BEETROOT_SEEDS;
                 break;
 
@@ -329,57 +320,44 @@ public class HerbalismManager extends SkillManager {
 
         switch (blockState.getType()) {
 
-            case POTATO:
-            case CARROT:
-            case BEETROOT_BLOCK:
-            case CROPS:
-                Crops crops = (Crops) blockState.getData();
+            case POTATOES:
+            case CARROTS:
+            case BEETROOTS:
+            case WHEAT:
+                Ageable crops = (Ageable) blockState.getBlockData();
 
                 if (greenTerra) {
-                    crops.setState(CropState.MEDIUM);
+                    crops.setAge(3);
                 }
                 else {
-                    switch (greenThumbStage) {
-                        case 4:
-                            crops.setState(CropState.SMALL);
-                            break;
-                        case 3:
-                            crops.setState(CropState.VERY_SMALL);
-                            break;
-                        case 2:
-                            crops.setState(CropState.GERMINATED);
-                            break;
-                        default:
-                            crops.setState(CropState.SEEDED);
-                            break;
-                    }
+                    crops.setAge(greenThumbStage);
                 }
 
                 return true;
 
-            case NETHER_WARTS:
-                NetherWarts warts = (NetherWarts) blockState.getData();
+            case NETHER_WART_BLOCK:
+                Ageable warts = (Ageable) blockState.getBlockData();
 
                 if (greenTerra || greenThumbStage > 2) {
-                    warts.setState(NetherWartsState.STAGE_TWO);
+                    warts.setAge(2);
                 }
                 else if (greenThumbStage == 2) {
-                    warts.setState(NetherWartsState.STAGE_ONE);
+                    warts.setAge(1);
                 }
                 else {
-                    warts.setState(NetherWartsState.SEEDED);
+                    warts.setAge(0);
                 }
 
                 return true;
 
             case COCOA:
-                CocoaPlant plant = (CocoaPlant) blockState.getData();
+                Ageable plant = (Ageable) blockState.getBlockData();
 
                 if (greenTerra || getGreenThumbStage() > 1) {
-                    plant.setSize(CocoaPlantSize.MEDIUM);
+                    plant.setAge(1);
                 }
                 else {
-                    plant.setSize(CocoaPlantSize.SMALL);
+                    plant.setAge(0);
                 }
 
                 return true;

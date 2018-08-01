@@ -376,7 +376,7 @@ Skills:
                 Summon_Length: 240
                 Summon_Max_Amount: 10
             Ocelot:
-                Item_Material: RAW_FISH
+                Item_Material: COD
                 Item_Amount: 10
                 Summon_Amount: 1
                 Summon_Length: 240
@@ -426,7 +426,7 @@ Double_Drops:
         Sugar_Cane_Block: true
         Vine: true
         Water_Lily: true
-        Yellow_Flower: true
+        Dandelion: true
     Mining:
         Coal_Ore: true
         Diamond_Ore: true
@@ -444,12 +444,12 @@ Double_Drops:
         Sandstone: true
         Stone: true
     Woodcutting:
-        Acacia: true
-        Birch: true
-        Dark_Oak: true
-        Generic: true
-        Jungle: true
-        Redwood: true
+        Acacia_Wood: true
+        Birch_Wood: true
+        Dark_Oak_Wood: true
+        Oak_Wood: true
+        Jungle_Wood: true
+        Spruce_Wood: true
 
 #
 #  Settings for commands
